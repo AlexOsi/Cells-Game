@@ -1,0 +1,9 @@
+#ifndef UNTITLED5_REPRESENTATION_H
+#define UNTITLED5_REPRESENTATION_H
+
+
+class Representation {
+};
+
+
+#endif //UNTITLED5_REPRESENTATION_H
