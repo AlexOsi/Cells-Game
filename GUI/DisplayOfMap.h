@@ -1,0 +1,10 @@
+#ifndef GAMECELLS_DISPLAYOFMAP_H
+#define GAMECELLS_DISPLAYOFMAP_H
+
+
+class DisplayOfMap {
+
+};
+
+
+#endif //GAMECELLS_DISPLAYOFMAP_H

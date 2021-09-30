@@ -1,5 +1,5 @@
-#ifndef UNTITLED5_IMOVABLE_H
-#define UNTITLED5_IMOVABLE_H
+#ifndef GAMECELLS_IMOVABLE_H
+#define GAMECELLS_IMOVABLE_H
 #include
 
 class IMovable {
@@ -9,4 +9,4 @@ class IMovable {
 };
 
 
-#endif //UNTITLED5_IMOVABLE_H
+#endif //GAMECELLS_IMOVABLE_H

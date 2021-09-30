@@ -1,6 +1,26 @@
 cmake_minimum_required(VERSION 3.20)
-project(untitled5)
+project(GameCells)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(untitled5 main.cpp GameObject.cpp GameObject.h HeroController.cpp HeroController.h GameMap.cpp GameMap.h GameObjectFactory.cpp GameObjectFactory.h Wall.cpp Wall.h Hero.cpp Hero.h Monster.cpp Monster.h IMovable.h Cell.h DisplayOfMap.cpp DisplayOfMap.h Image.cpp Image.h)
+add_executable(GameCells
+        main.cpp
+        GameObjects/GameObject.cpp
+        GameObjects/GameObject.h
+        Logic/HeroController.cpp
+        Logic/HeroController.h
+        GameMap/GameMap.cpp
+        GameMap/GameMap.h
+        Logic/GameObjectFactory.cpp
+        Logic/GameObjectFactory.h
+        GameObjects/Wall.cpp
+        GameObjects/Wall.h
+        GameObjects/Hero.cpp
+        GameObjects/Hero.h
+        GameObjects/Monster.cpp
+        GameObjects/Monster.h
+        IMovable.h DataObjects/Cell.h
+        GUI/DisplayOfMap.cpp
+        GUI/DisplayOfMap.h
+        DataObjects/Image.cpp
+        DataObjects/Image.h)

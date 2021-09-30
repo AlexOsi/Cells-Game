@@ -1,14 +1,14 @@
-#ifndef UNTITLED5_GAMEMAP_H
-#define UNTITLED5_GAMEMAP_H
+#ifndef GAMECELLS_GAMEMAP_H
+#define GAMECELLS_GAMEMAP_H
 
 #include <vector>
 #include <memory>
 #include <random>
 #include <chrono>
+#include <exception>
 
-#include "Cell.h"
-#include "GameObject.h"
-
+#include "../DataObjects/Cell.h"
+#include "../GameObjects/GameObject.h"
 
 class GameMap {
 public:
@@ -25,7 +25,7 @@ public:
         return m_mapCells[cell.row][cell.column];
     }
 private:
-    Cell m_getAvailableCell(GameObjectType type) {
+    Cell m_getAvailableCell(TypeGameObject type) {
         // logic
         Cell cellForGameObject{0, 0};
         while (m_mapCells[cellForGameObject.row][cellForGameObject.column] != nullptr) {
@@ -45,9 +45,9 @@ private:
 
 
     std::vector<std::vector<std::shared_ptr<GameObject>>> m_mapCells; // error
-    int m_rowsNum;
-    int m_columnsNum;
+    int m_rowsNum{0};
+    int m_columnsNum{0};
 };
 
 
-#endif //UNTITLED5_GAMEMAP_H
+#endif //GAMECELLS_GAMEMAP_H
