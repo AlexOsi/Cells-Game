@@ -4,15 +4,15 @@
 
 class Image {
 public:
-    char getSymbolRepresentingObject() const {
+    explicit Image (char symbol)
+        : m_symbol(symbol)
+    {}
 
-        return m_symbolRepresentingObject;
-    }
-    void setSymbolRepresentingObject(char symbolRepresentingObject) {
-        m_symbolRepresentingObject = symbolRepresentingObject;
-    }
+    char getSymbol() const;
+
+    void setSymbol(char symbol);
 private:
-    char m_symbolRepresentingObject;
+    char m_symbol;
 };
 
 

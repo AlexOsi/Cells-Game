@@ -1,9 +1,16 @@
 #include <iostream>
 
-#include "GameMap/GameMap.h"
+#include "GameMaps/WorldMap.h"
 #include "Logic/GameObjectFactory.h"
+#include "Logic/Spawner.h"
 
 int main() {
-    GameMap gameMap(100, 100);
-    gameMap.addObject(GameObjectFactory::createGameObject(TypeGameObject::Monster));
+    WorldMap worldMap(100, 100);
+
+    Spawner spawner(worldMap,{
+        {TypeGameObject::Hero, 1},
+        {TypeGameObject::Monster, 2},
+        {TypeGameObject::Wall, 10}});
+    spawner.Spawn();
+
 }

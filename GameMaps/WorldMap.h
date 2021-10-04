@@ -1,5 +1,5 @@
-#ifndef GAMECELLS_GAMEMAP_H
-#define GAMECELLS_GAMEMAP_H
+#ifndef GAMECELLS_WORLDMAP_H
+#define GAMECELLS_WORLDMAP_H
 
 #include <vector>
 #include <memory>
@@ -10,9 +10,9 @@
 #include "../DataObjects/Cell.h"
 #include "../GameObjects/GameObject.h"
 
-class GameMap {
+class WorldMap {
 public:
-    explicit GameMap(const int rowsNum, const int columnsNum) {
+    explicit WorldMap(const int rowsNum, const int columnsNum) {
         m_rowsNum = rowsNum;
         m_columnsNum = columnsNum;
         m_mapCells.resize(rowsNum, std::vector<std::shared_ptr<GameObject>>(columnsNum));
@@ -24,6 +24,11 @@ public:
     std::shared_ptr<GameObject> getObjectInCell(const Cell& cell) {
         return m_mapCells[cell.row][cell.column];
     }
+
+    Cell getCellOfObject(std::shared_ptr<GameObject>) {
+
+    }
+
 private:
     Cell m_getAvailableCell(TypeGameObject type) {
         // logic
@@ -44,10 +49,10 @@ private:
     }
 
 
-    std::vector<std::vector<std::shared_ptr<GameObject>>> m_mapCells; // error
+    std::vector<std::vector<std::shared_ptr<GameObject>>> m_mapCells;
     int m_rowsNum{0};
     int m_columnsNum{0};
 };
 
 
-#endif //GAMECELLS_GAMEMAP_H
+#endif //GAMECELLS_WORLDMAP_H

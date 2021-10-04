@@ -9,8 +9,8 @@ add_executable(GameCells
         GameObjects/GameObject.h
         Logic/HeroController.cpp
         Logic/HeroController.h
-        GameMap/GameMap.cpp
-        GameMap/GameMap.h
+        GameMaps/WorldMap.cpp
+        GameMaps/WorldMap.h
         Logic/GameObjectFactory.cpp
         Logic/GameObjectFactory.h
         GameObjects/Wall.cpp
@@ -20,7 +20,7 @@ add_executable(GameCells
         GameObjects/Monster.cpp
         GameObjects/Monster.h
         IMovable.h DataObjects/Cell.h
-        GUI/DisplayOfMap.cpp
-        GUI/DisplayOfMap.h
+        GUI/DisplayOfWorldMap.cpp
+        GUI/DisplayOfWorldMap.h
         DataObjects/Image.cpp
-        DataObjects/Image.h)
+        DataObjects/Image.h GameObjects/Character.cpp GameObjects/Character.h Logic/Spawner.cpp Logic/Spawner.h)

@@ -2,7 +2,7 @@
 #define GAMECELLS_GAMEOBJECT_H
 
 #include "../DataObjects/Image.h"
-#include "../DataObjects/Cell.h"
+//#include "../DataObjects/Cell.h"
 
 enum class TypeGameObject {
     Hero,
@@ -14,7 +14,7 @@ enum class TypeGameObject {
 struct DataGameObject {
     TypeGameObject typeGameObject;
     Image image;
-    Cell cell;
+//    Cell cell;
 };
 
 

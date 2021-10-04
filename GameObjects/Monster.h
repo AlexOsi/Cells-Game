@@ -6,7 +6,9 @@ class Monster : public GameObject {
 public:
     explicit Monster (const DataGameObject& dataGameObject)
             : GameObject(dataGameObject)
-    {}
+    {
+
+    }
 };
 
 
