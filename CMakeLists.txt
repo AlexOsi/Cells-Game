@@ -20,7 +20,7 @@ add_executable(GameCells
         GameObjects/Monster.cpp
         GameObjects/Monster.h
         IMovable.h DataObjects/Cell.h
-        GUI/DisplayOfWorldMap.cpp
-        GUI/DisplayOfWorldMap.h
+        GUI/Display.cpp
+        GUI/Display.h
         DataObjects/Image.cpp
         DataObjects/Image.h GameObjects/Character.cpp GameObjects/Character.h Logic/Spawner.cpp Logic/Spawner.h)

@@ -7,8 +7,7 @@
 enum class TypeGameObject {
     Hero,
     Monster,
-    Wall,
-    Nothing
+    Wall
 };
 
 struct DataGameObject {
@@ -28,8 +27,8 @@ public:
     {}
 
     void setDataGameObject(const DataGameObject& dataGameObject);
-    TypeGameObject getType() const;
-    Image getImage() const;
+
+    DataGameObject getDataGameObject() const;
 private:
     DataGameObject m_dataGameObject;
 };

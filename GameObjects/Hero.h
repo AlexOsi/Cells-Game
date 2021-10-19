@@ -1,5 +1,6 @@
 #ifndef GAMECELLS_HERO_H
 #define GAMECELLS_HERO_H
+
 #include "GameObject.h"
 
 class Hero : public GameObject {

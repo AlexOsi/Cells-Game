@@ -17,16 +17,12 @@ public:
         m_columnsNum = columnsNum;
         m_mapCells.resize(rowsNum, std::vector<std::shared_ptr<GameObject>>(columnsNum));
     }
-    void addObject(const std::shared_ptr<GameObject>& object) {
-        Cell availableCell = m_getAvailableCell(object->getType());
-        m_mapCells[availableCell.row][availableCell.column] = object;
+    void addGameObject(const std::shared_ptr<GameObject>& gameObject) {
+        Cell availableCell = m_getAvailableCell(gameObject->getDataGameObject().typeGameObject);
+        m_mapCells[availableCell.row][availableCell.column] = gameObject;
     }
-    std::shared_ptr<GameObject> getObjectInCell(const Cell& cell) {
+    std::shared_ptr<GameObject> getGameObjectInCell(const Cell& cell) {
         return m_mapCells[cell.row][cell.column];
-    }
-
-    Cell getCellOfObject(std::shared_ptr<GameObject>) {
-
     }
 
 private:
@@ -48,10 +44,10 @@ private:
         return Cell{rowNumUniformIntDistribution(engine), columnNumUniformIntDistribution(engine)};
     }
 
-
+private:
     std::vector<std::vector<std::shared_ptr<GameObject>>> m_mapCells;
-    int m_rowsNum{0};
-    int m_columnsNum{0};
+    int m_rowsNum;
+    int m_columnsNum;
 };
 
 
