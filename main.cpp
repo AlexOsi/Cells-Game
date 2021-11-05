@@ -12,5 +12,4 @@ int main() {
         {TypeGameObject::Monster, 2},
         {TypeGameObject::Wall, 10}});
     spawner.Spawn();
-
 }
